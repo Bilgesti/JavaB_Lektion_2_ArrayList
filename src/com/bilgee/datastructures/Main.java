@@ -5,6 +5,7 @@ import org.w3c.dom.ls.LSException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -12,8 +13,12 @@ public class Main {
         // Fixed sized ??? begränsad storlek
         int[] scores = { 0, 150, 500 }; // Delete not Add elements - Impossible!
 
+        // TODO One element: [prev, ELEMENT, next]
+
         // Arraylist
         ArrayList<Integer> scoreList = new ArrayList<>(); // NOT- recommended
+
+        List<Integer> scoreLinkedList = new LinkedList<>();
 
         // List + Arraylist
         List<Integer> scoreList2 = new ArrayList<>(20); // Recommended
@@ -25,6 +30,12 @@ public class Main {
         scoreList2.set( 1,400 );
 
         System.out.println(scoreList2);
+
+
+        // List || LinkedList
+       //scoreLinkedList.addFirst( 150 );
+        System.out.println("LINKED LIST");
+        System.out.println(scoreLinkedList);
 
 
 
